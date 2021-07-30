@@ -596,6 +596,25 @@ footer span a:hover{
     }
 }
 
+
+.formsub{
+    width: 90px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    border-color: whitesmoke;
+}
+
+.formsub:hover{
+    width: 90px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    color: red;
+    border-radius: 10px;
+    border-color: red;
+}
+
 @media (max-width: 991px) {
     .max-width{
         padding: 0 50px;
