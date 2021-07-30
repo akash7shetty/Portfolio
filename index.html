@@ -15,17 +15,17 @@
     <style>
         #more {display: none;}
     </style>
-    <script language=JavaScript>
-    
-        var message = "function disabled";
-    
-        function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
-    
-        if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
-    
-        document.onmousedown = rtclickcheck;
-    
-    </script>
+    <SCRIPT language=JavaScript>
+
+	var message = "function disabled";
+
+	function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
+
+	if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
+
+	document.onmousedown = rtclickcheck;
+
+    </SCRIPT>
 </head>
 <body>
     <div class="scroll-up-btn">
@@ -281,25 +281,10 @@
                                 <div class="sub-title">akashpshetty07@gmail.com</div>
                             </div>
                         </div>
-                        <div class="row">
-                            <a href="https://twitter.com/akash7shetty?s=09" target=”_blank”><i class=" fa-twitter-square"></i></a>
-                            <div class="info">
-                                <div class="head">Twitter</div>
-                                <div class="sub-title"><a href="https://twitter.com/akash7shetty?s=09" target=”_blank”>@akash7shetty</a></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <a href="https://github.com/akash7shetty" target=”_blank”><i class="fa-github-square"></i></a>
-                            <div class="info">
-                                <div class="head">Github</div>
-                                <div class="sub-title"><a href="https://github.com/akash7shetty" target=”_blank”>@akash7shetty</a></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="column right">
                     <div class="text">Message Form</div>
-
                     <form id="my-form"action="https://formspree.io/f/xqkwypdw" method="POST">
                         <div class="field name">
                             <label>Name:</label>
@@ -312,7 +297,6 @@
                         </div>
                     </form>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -344,5 +328,7 @@
     <footer>
         <span>Created By <a href="https://akash7shetty.github.io/Portfolio/">Akash Shetty</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
