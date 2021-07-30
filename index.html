@@ -78,7 +78,8 @@
                         Interntional School(ICSE)</b> and my PU at <b>Vidyodaya PU College</b> with my percent being 84% and 93% respectively.</p>
                         I look forward to work with a company which has a challenging job and work-life balance. 
                         <p>
-                            My motive is to work in an Organization that provides a platform of opportunities for personal advancement and to apply my knowledge.
+                            My motive is to work in an Organization that 
+                            provides a platform of opportunitiesfor personal advancement and to apply my knowledge.
                         </p>
                     </p>
                     <a href="Resume.pdf" target=”_blank”>Download CV</a>
@@ -86,6 +87,8 @@
             </div>
         </div>
     </section>
+
+    
 
     <!-- skills section start -->
     <section class="skills" id="skills">
@@ -106,7 +109,7 @@
                             presenting, and others. 
                         </span>
                     </p><br>
-                    <button onclick="myFunction()" id="myBtn">Read more</button>
+                    <button onclick="myFunction()" id="myBtn">Read more...</button>
                     <script>
                         function myFunction() {
                           var dots = document.getElementById("dots");
@@ -296,36 +299,50 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message Form</div>
-                    <form class="contact-form" action="#" method="POST">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" class="fullname" placeholder="Name">
-                            </div>
-                            <div class="field email">
-                                <input type="text" class="email-input" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text" class="subject" placeholder="Subject">
-                        </div>
-                        <div class="field textarea">
-                            <textarea class="message" cols="30" rows="10" placeholder="This contact form might not be supported/working. Please do directly mail me or connect to me by Social-media."></textarea>
-                        </div>
-                        <div class="button-area">
-                            <button class="send-msg" type="submit" name="send">Send message</button>
-                            <div class="error-box"></div>
+
+                    <form id="my-form"action="https://formspree.io/f/xqkwypdw" method="POST">
+                        <div class="field name">
+                            <label>Name:</label>
+                            <input type="text" class="fullname" placeholder="Name">
+                            <label>Email:</label>
+                            <input type="email" name="email" placeholder="ex. username@mail.com" /><br>
+                            <label>Message:</label>
+                            <input type="text" name="message" placeholder="message..."/><br><br>
+                            <button id="my-form-button" class="formsub">Submit</button>    
                         </div>
                     </form>
                 </div>
+                
             </div>
         </div>
     </section>
+    <center><p id="my-form-status"></p></center><br>
+    <script>
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            status.innerHTML = "Thanks! I'll get back to you asap :)";
+            form.reset()
+          }).catch(error => {
+            status.innerHTML = "Sorry, Some error occcured :("
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
 
     <!-- footer section start -->
     <footer>
-        <span>Created By <a href="https://akash7shetty.github.io/Portfolio/">Akash Shetty</a> | <span class="far fa-copyright"></span> 2021 &emsp;@All rights reserved.</span>
+        <span>Created By <a href="https://akash7shetty.github.io/Portfolio/">Akash Shetty</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
