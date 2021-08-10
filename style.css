@@ -29,6 +29,7 @@ html{
 
 body .home{
     background-image: url(./images/banner.png);
+    background-color:#111;
 }
 /* custom scroll bar */
 ::-webkit-scrollbar {
